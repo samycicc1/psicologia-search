@@ -5,56 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psychology Journal Hub</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f9; margin: 0; padding: 0; }
-        
-        /* Header Blu Scuro */
-        .header { background-color: #2c3e50; color: white; text-align: center; padding: 40px 20px; }
-        .header h1 { margin: 0; font-size: 2.5em; }
-        .header p { margin-top: 10px; opacity: 0.8; }
-
-        /* Container centrale */
-        .container { max-width: 900px; margin: -30px auto 50px auto; padding: 0 20px; }
-
-        /* Card Bianca per la Ricerca */
-        .search-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-bottom: 30px; }
-        .search-card h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; margin-top: 0; }
-
-        /* Card per l'elenco riviste */
-        .journal-list { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .journal-item { border-bottom: 1px solid #eee; padding: 15px 0; }
-        .journal-item:last-child { border-bottom: none; }
-        .journal-name { color: #0056b3; font-weight: bold; font-size: 1.2em; text-decoration: none; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; color: #333; }
+        .header { background-color: #1a365d; color: white; text-align: center; padding: 50px 20px; }
+        .header h1 { margin: 0; font-size: 2.5rem; }
+        .header p { opacity: 0.9; font-size: 1.1rem; margin-top: 10px; }
+        .container { max-width: 1000px; margin: -40px auto 50px; padding: 0 20px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .card h2 { color: #1a365d; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; margin-top: 0; }
+        .journal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px; }
+        .journal-item { padding: 10px; border-left: 4px solid #3182ce; background: #f8fafc; border-radius: 4px; }
+        .journal-name { font-weight: bold; color: #2c5282; }
     </style>
 </head>
 <body>
 
     <div class="header">
         <h1>Psychology Journal Hub</h1>
-        <p>Il portale per la ricerca nelle 15 riviste più autorevoli di Psicologia</p>
+        <p>Motore di ricerca accademico per le top 15 riviste di Psicologia</p>
     </div>
 
     <div class="container">
-        <div class="search-card">
+        <div class="card">
             <h2>Cerca Articoli</h2>
-            <p>Questa barra esegue una ricerca federata negli archivi delle riviste selezionate.</p>
+            <p>La ricerca verrà effettuata contemporaneamente su tutti gli archivi delle riviste elencate di seguito.</p>
             <script async src="https://cse.google.com/cse.js?cx=850a491e24a8d4a26"></script>
             <div class="gcse-search"></div>
-            </div>
+        </div>
 
-        <div class="journal-list">
-            <h2 style="color: #2c3e50;">Riviste Incluse (Top 15)</h2>
-            
-            <div class="journal-item">
-                <div class="journal-name">1. Psychological Review</div>
-                <small>Editore: American Psychological Association (APA)</small>
+        <div class="card">
+            <h2>Riviste Incluse nel Global-Tier</h2>
+            <div class="journal-grid">
+                <div class="journal-item"><div class="journal-name">1. Nature Reviews Psychology</div></div>
+                <div class="journal-item"><div class="journal-name">2. Annual Review of Psychology</div></div>
+                <div class="journal-item"><div class="journal-name">3. Psychological Review</div></div>
+                <div class="journal-item"><div class="journal-name">4. Trends in Cognitive Sciences</div></div>
+                <div class="journal-item"><div class="journal-name">5. Psychological Bulletin</div></div>
+                <div class="journal-item"><div class="journal-name">6. Annual Review of Clinical Psychology</div></div>
+                <div class="journal-item"><div class="journal-name">7. Journal of Personality and Social Psychology</div></div>
+                <div class="journal-item"><div class="journal-name">8. Clinical Psychology Review</div></div>
+                <div class="journal-item"><div class="journal-name">9. Psychological Science</div></div>
+                <div class="journal-item"><div class="journal-name">10. Educational Psychology Review</div></div>
+                <div class="journal-item"><div class="journal-name">11. Journal of Applied Psychology</div></div>
+                <div class="journal-item"><div class="journal-name">12. Developmental Review</div></div>
+                <div class="journal-item"><div class="journal-name">13. Personality and Social Psychology Review</div></div>
+                <div class="journal-item"><div class="journal-name">14. Perspectives on Psychological Science</div></div>
+                <div class="journal-item"><div class="journal-name">15. Child Development</div></div>
             </div>
-
-            <div class="journal-item">
-                <div class="journal-name">2. Annual Review of Psychology</div>
-                <small>Editore: Annual Reviews</small>
-            </div>
-            
-            </div>
+        </div>
     </div>
 
 </body>

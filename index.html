@@ -3,15 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psyche Lens — Archetypal Dream Matrix</title>
+    <title>History of Education Journal Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="importmap">
-        { "imports": { "@google/generative-ai": "https://esm.run/@google/generative-ai" } }
-    </script>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,800;1,300;1,600&display=swap');
         
@@ -23,24 +16,7 @@
             overflow-x: hidden;
         }
 
-        /* Effetto Scrittura Sfumata */
-        .letter-reveal { 
-            opacity: 0; 
-            animation: reveal 0.8s forwards; 
-            display: inline-block; 
-            filter: blur(8px); 
-        }
-        @keyframes reveal { to { opacity: 1; filter: blur(0); } }
-
-        /* Vetro Sfumato per le Card */
-        .glass-card { 
-            background: rgba(15, 23, 42, 0.6); 
-            backdrop-filter: blur(16px); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Titolo con Gradiente come in foto */
+        /* Titolo con lo stesso gradiente di Psyche Lens */
         .title-enhanced { 
             background: linear-gradient(to bottom, #ffffff 30%, #6366f1 100%); 
             -webkit-background-clip: text; 
@@ -48,7 +24,7 @@
             font-style: italic;
         }
 
-        /* Sfondo Aurora */
+        /* Sfondo Aurora Spaziale */
         .aurora-bg {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -57,12 +33,96 @@
         }
         .blob {
             position: absolute;
-            width: 500px; height: 500px;
-            background: rgba(79, 70, 229, 0.15);
-            filter: blur(80px);
+            width: 600px; height: 600px;
+            background: rgba(79, 70, 229, 0.12);
+            filter: blur(100px);
             border-radius: 50%;
-            animation: move 20s infinite alternate;
+            animation: move 25s infinite alternate;
+        }
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(30%, 30%); }
         }
 
-        @keyframes move {
-            from { transform: translate(-10%, -10%);
+        /* Card con effetto vetro (Glassmorphism) */
+        .glass-card { 
+            background: rgba(15, 23, 42, 0.6); 
+            backdrop-filter: blur(16px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(99, 102, 241, 0.5);
+            transform: translateY(-5px);
+        }
+
+        /* Stile per il motore di ricerca Google */
+        .gcse-search-container {
+            background: transparent;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-bg">
+        <div class="blob" style="top: -10%; left: -10%;"></div>
+        <div class="blob" style="bottom: 10%; right: 10%; background: rgba(147, 51, 234, 0.08);"></div>
+    </div>
+
+    <nav class="p-8 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-indigo-400 font-bold tracking-widest uppercase text-[10px]">Ricerca Accademica</div>
+        <div class="flex gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-slate-500">
+            <span class="text-white">Home</span>
+            <span class="hover:text-white cursor-pointer transition-colors">Archivio</span>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 title-enhanced tracking-tighter leading-tight">
+                History of Education<br>Journal Hub
+            </h1>
+            <p class="text-slate-300 text-lg md:text-xl font-light italic leading-relaxed">
+                Esplora le stelle della ricerca accademica. Il portale unificato per le riviste di storia dell'educazione.
+            </p>
+        </header>
+
+        <div class="glass-card p-6 md:p-10 rounded-[2.5rem] mb-16 shadow-2xl">
+            <div class="text-center mb-6">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-indigo-400 font-bold">Cerca nelle riviste</span>
+            </div>
+            <div class="gcse-search-container">
+                <script async src="https://cse.google.com/cse.js?cx=e26d97c00e129486c"></script>
+                <div class="gcse-search"></div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-20">
+            <a href="https://www.historyofeducation.org/journal/" target="_blank" class="glass-card p-8 rounded-3xl block group">
+                <h3 class="text-xl font-bold text-indigo-300 mb-2 group-hover:text-white transition-colors">History of Education Quarterly</h3>
+                <p class="text-slate-400 text-sm italic">Accedi alla risorsa ufficiale</p>
+            </a>
+            
+            <a href="https://www.tandfonline.com/toc/ched20/current" target="_blank" class="glass-card p-8 rounded-3xl block group">
+                <h3 class="text-xl font-bold text-indigo-300 mb-2 group-hover:text-white transition-colors">History of Education</h3>
+                <p class="text-slate-400 text-sm italic">Ricerche storiche sull'educazione</p>
+            </a>
+            
+            <a href="https://riviste.unimi.it/index.php/historyofeducation" target="_blank" class="glass-card p-8 rounded-3xl block group">
+                <h3 class="text-xl font-bold text-indigo-300 mb-2 group-hover:text-white transition-colors">History of Education & Children's Literature</h3>
+                <p class="text-slate-400 text-sm italic">Focus sulla letteratura per l'infanzia</p>
+            </a>
+            
+            <a href="https://www.paedagogica-historica.net/" target="_blank" class="glass-card p-8 rounded-3xl block group">
+                <h3 class="text-xl font-bold text-indigo-300 mb-2 group-hover:text-white transition-colors">Paedagogica Historica</h3>
+                <p class="text-slate-400 text-sm italic">Journal internazionale di storia dell'educazione</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-20 text-center text-slate-800 text-[10px] uppercase tracking-[0.6em]">
+        © 2024 SamyCicc1 — History of Education Matrix
+    </footer>
+</body>
+</html>
